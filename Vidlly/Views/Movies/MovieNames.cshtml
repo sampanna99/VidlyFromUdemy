@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Vidlly.Models.Movie>
+
+@{
+    ViewBag.Title = "MovieNames";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie Names</h2>
+@if (Model.Count() == 0)
+{
+    <li>No movies to show</li>
+}
+else
+{
+    foreach (var movie in Model)
+    {
+       <li> @movie.Name </li>
+    }
+}
+
