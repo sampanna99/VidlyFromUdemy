@@ -14,8 +14,11 @@ else
 {
     foreach (var customer in Model)
     {
-        <li>@customer.Name</li>
+        <li>@Html.ActionLink(customer.Name, "Details", new {id = customer.Id })</li>
+        <li>@Html.ActionLink(customer.Name, "Edit", new {id = customer.Id })</li>
         <li>@customer.MembershipType.DiscountRate%</li>
+        <li>@customer.MembershipType.Name</li>
+        
     }
 }
 

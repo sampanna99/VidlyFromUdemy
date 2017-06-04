@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Vidlly.ViewModels;
 
 namespace Vidlly.Models
 {
@@ -15,8 +17,10 @@ namespace Vidlly.Models
 
         public MembershipType MembershipType { get; set; }
 
+        [Display(Name = "Membership type")]
         public byte MembershipTypeId { get; set; }
 
-
+        [Min18YearsOfAMember]
+        public DateTime? Birthday { get; set; }
     }
 }
