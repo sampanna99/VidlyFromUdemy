@@ -77,6 +77,8 @@ namespace Vidlly.Controllers.Api
             //customerInDb.MembershipTypeId = customerDto.MembershipTypeId;
 
             _context.SaveChanges();
+
+
         }
 
         [HttpDelete]

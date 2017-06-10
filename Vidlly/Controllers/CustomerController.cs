@@ -25,13 +25,13 @@ namespace Vidlly.Controllers
         {
             //return View();
 
-            var customers = _context.Customers.Include(a => a.MembershipType).ToList();
+            //var customers = _context.Customers.Include(a => a.MembershipType).ToList();
             //var customer = new List<Customer>()
             //{
             //    new Customer { Name = "Rawan" },
             //    new Customer {Name = "Ram" }
             //};
-            return View(customers);
+            return View();
         }
 
         public ActionResult New()
