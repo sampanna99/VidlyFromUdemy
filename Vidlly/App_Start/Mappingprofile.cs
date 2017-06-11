@@ -8,8 +8,13 @@ namespace Vidlly.App_Start
     {
         public Mappingprofile()
         {
+            //member to dto
             Mapper.CreateMap<Customer, CustomerDto>();
-            Mapper.CreateMap<CustomerDto, Customer>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+
+
+            //dto to member
+            Mapper.CreateMap<CustomerDto, Customer>().ForMember(c => c.Id, opt => opt.Ignore());
         }
     }
 }
